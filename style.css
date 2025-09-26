@@ -331,17 +331,17 @@ nav ul li a:hover::after{
 /* Set formatting for the section of 4 reviews examples */
 .reviews-list{
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-   grid-gap: 40px;
-   margin-top: 50px; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
 }
 
 /* Set the formatting for each reviews example separately */
 .reviews{
-    border-radius: 10px;
     position: relative;
     overflow: hidden;
-    background-color: none;
+    border-radius: 10px;
+    max-width: 300px;  /* constrain width */
+    margin: auto; 
 }
 
 #reviews .sub-title{
@@ -353,9 +353,10 @@ nav ul li a:hover::after{
 /* set the image formatting */
 .reviews img{
     width: 100%;
+    height: auto;        /* preserve aspect ratio */
     border-radius: 10px;
     display: block;
-    transition: tranform 0.5s;
+    transition: transform 0.5s;
 }
 
 /* Each reviews example has a layer with the gradient gackground and the text on top of the image*/ 
