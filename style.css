@@ -99,11 +99,11 @@ nav ul li a:hover::after{
     font-size: 30px;
     margin-left: auto;
     margin-right: auto;
-    width: 28em;
-
-    display: inline-block;      /* shrink-wrap to content */
-    padding: 20px 40px;         /* spacing inside the shape */
-    background-color: rgba(29, 67, 85); /* semi-transparent white */
+    width: 85%; /* Use a fluid percentage */
+    max-width: 28em; /* Keep a maximum width for large screens */
+    display: inline-block;
+    padding: 20px 40px;
+    background-color: rgba(29, 67, 85);
     text-align: center;
 }
 
@@ -510,7 +510,6 @@ form .btn2{
 }
 
 
-/* ************************************************* CSS For Small Screens ************************************************* */
 @media only screen and (max-width: 600px){
     #header{
         background-color: #ebe8e4;
@@ -596,5 +595,4 @@ form .btn2{
     .contact-right form, .contact-right {
         flex-basis: 100%;
     }
-    
 }
