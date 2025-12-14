@@ -5,16 +5,21 @@
     box-sizing: border-box;
 }
 html{
-    scroll-behavior: auto;
+    /* Keep scroll-behavior for smooth transitions when jumping between sections */
+    scroll-behavior: smooth; 
 }
 body{
     background: #ebe8e4;
-    color: #1d4355;
-    overflow: hidden; /* This prevents all scrolling */
+    color: #1d4355;    
+    scroll-snap-type: y mandatory; 
+}
+/* 3. ADD: Define the snap points for each section */
+#header, #about, #pricing, #reviews, #contact{
+    scroll-snap-align: start;
 }
 #header{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     
    background-image: url("images/cover_photo.png");
    background-size: cover;    /* scales to cover entire page */
@@ -120,9 +125,9 @@ nav ul li a:hover::after{
     padding: 90px 0;
     color: #1d4355;
     background-color: #ebe8e4;
-    height: 100vh; 
+    min-height: 100vh; 
     display: flex;
-    align-items: center; 
+    align-items: flex-start; /* FIX 1: Content starts from the top */
 }
 
 .top-row{
@@ -227,7 +232,7 @@ nav ul li a:hover::after{
 /**********************************************Pricing*************************/
 #pricing{
     padding: 90px 0;
-    height: 100vh;
+    min-height: 100vh;
 }
 #pricing .sub-title{
     font-size: 40px;
@@ -323,9 +328,9 @@ nav ul li a:hover::after{
 #reviews{
     color: #FFFFFF;
     padding: 90px 0;
-    background-color: #ebe8e4;
-    height: 100vh;
-    align-items: center; 
+    background-color: #ebe8e4; 
+    min-height: 100vh;
+    align-items: center;
 }
 
 /* Set formatting for the section of 4 reviews examples */
@@ -427,9 +432,9 @@ nav ul li a:hover::after{
     padding: 90px 0;
     color: #ebe8e4;
     background-color: #1d4355;
-    height: 100vh; 
+    min-height: 100vh; 
     display: flex;
-    align-items: center; 
+    align-items: flex-start; /* FIX 2: Content starts from the top */
 }
 .row{
     display: flex;
@@ -516,7 +521,8 @@ form .btn2{
         background-color: #ebe8e4;
     }
     #about, #pricing, #reviews, #contact{
-        height: 85vh; 
+        min-height: 85vh; /* Use min-height to ensure content can grow */
+        height: auto; /* Remove the fixed height constraint */
         overflow-y: auto; 
     }
     #contact{
@@ -601,10 +607,9 @@ form .btn2{
     .intro-sentence h1 {
         font-size: 30px;
     }
-    #about, #portfolio, #contact{
-        height: 100%;
+    #about {
+        align-items: flex-start;  
     }
-
     /* Adjust .row and columns for smaller screens */
     .row {
         flex-direction: column;
