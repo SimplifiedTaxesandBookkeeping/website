@@ -515,43 +515,6 @@ form .btn2{
     #header{
         background-color: #ebe8e4;
     }
-    #about, #pricing, #reviews, #contact{
-        height: 85vh; 
-        overflow-y: auto; 
-    }
-    #contact{
-        padding-top: 100px; 
-    }
-     #pricing .container.pricing-cards {
-        flex-direction: column;
-        gap: 20px;
-        padding: 30px 10%;
-        align-items: center;
-    }
-    #pricing .card {
-        width: 100%; 
-        border-radius: 30px !important;
-        margin-top: 0 !important;
-        transform: none !important;
-        min-height: auto;
-    }
-    #pricing .small-business {
-        background-color: #f3f0ec;
-        color: #1d4355;
-    }
-    #pricing .small-business h3,
-    #pricing .small-business h1,
-    #pricing .small-business ul li {
-        color: #1d4355;
-    }
-
-    /* FIX: Reviews list stacks in a single column */
-    .reviews-list{
-        grid-template-columns: 1fr;
-        grid-gap: 20px;
-        margin-top: 30px;
-    }
-
     /* Resize intro sentence */
     .intro-sentence{
         margin-top: 50%;
@@ -580,11 +543,6 @@ form .btn2{
         z-index: 2;
         transition: right 0.5s;
         padding-right: 15px;
-    }
-    .reviews-list{
-        grid-template-columns: 1fr; 
-        grid-gap: 20px;
-        margin-top: 30px;
     }
     nav ul li{
         display: block;
@@ -637,71 +595,6 @@ form .btn2{
     /* Contact form width adjustments */
     .contact-right form, .contact-right {
         flex-basis: 100%;
-    }
-    /* Force cards to stack vertically */
-    #pricing .container.pricing-cards {
-        flex-direction: column;
-        gap: 20px;
-        padding: 30px 10%;
-        align-items: center;
-    }
-
-    /* Make cards take full width, remove special styling */
-    #pricing .card {
-        width: 100%; 
-        border-radius: 30px !important; /* Forces rounded corners on all sides */
-        margin-top: 0 !important; /* Removes negative margin */
-        transform: none !important; /* Removes scale effect */
-        min-height: auto; /* Allow height to adjust */
-    }
-
-    /* Ensure the central card reverts to default styling */
-    #pricing .small-business {
-        background-color: #f3f0ec; /* Revert background color */
-        color: #1d4355; /* Revert text color */
-    }
-
-    #pricing .small-business h3,
-    #pricing .small-business h1,
-    #pricing .small-business ul li {
-        color: #1d4355; /* Revert internal text color */
-    }
-    .row {
-        flex-direction: column; /* This is the key change to stack them */
-        align-items: center;
-    }
-
-    /************* MOBILE CONTACT *************/
-    /* Adjust contact column sizes and spacing */
-    .left-contact,
-    .right-contact {
-        flex-basis: 100%; /* Make both columns take full width */
-        padding-left: 0; /* Remove padding-left from right-contact */
-        padding: 0 10%; /* Add uniform horizontal padding to center content */
-    }
-
-    .left-contact {
-        text-align: center;
-    }
-    /* Fix spacing on the left side text */
-    .left-contact h1 {
-        margin-bottom: 20px;
-    }
-    /* Fix spacing issue caused by <br> tags and p margin */
-    .left-contact p {
-        margin: 10px 0 0 0; 
-        line-height: 1.5;
-    }
-    .left-contact h5 {
-        margin-bottom: 20px;
-        font-size: 14px; 
-    }
-    .left-contact p br{
-        display: none; 
-    }
-    .dark-title {
-        /* Reset padding from desktop style */
-        padding: 0;
     }
 
 }
